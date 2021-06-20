@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -20,7 +21,7 @@ namespace RogueGame{
 
 
 		// Constructor
-		public GameObject(float x, float y, int width, int height, ObjectTag tag) : base(GameHolder.GameInstance){
+		public GameObject(float x, float y, int width, int height, ObjectTag tag, Game game) : base(game){
 
 			// Dimensions
 			this.x = x;
@@ -35,6 +36,9 @@ namespace RogueGame{
 			rendered  = true;
 			collision = false;
 			hover 	  = false;
+
+			// Load Content
+			LoadContent();
 		}
 
 

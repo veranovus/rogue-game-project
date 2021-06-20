@@ -9,7 +9,7 @@ namespace RogueGame{
 		// Properties
 		public Vector2 Position;
 		public Matrix Transform { get; private set; }
-		public bool lockPlayer = true;
+		public bool lockPlayer = false;
 
 		// Camera Zoom
 		public float scale = 1f;
@@ -23,19 +23,19 @@ namespace RogueGame{
 
 
 		// Update
-		public void Update(){
+		public void Update(Vector2 playerPos){
 
 			// Leave this at bottom of update
-			UpdateCamera();
+			UpdateCamera(playerPos);
 		}
 
 
 		// Update the camera properties
-		private void UpdateCamera(){
+		private void UpdateCamera(Vector2 playerPos){
 
 			if (lockPlayer){
 
-				FollowPlayer();
+				FollowPlayer(playerPos);
 			}
 
 			Transform = Matrix.CreateTranslation((int)-Position.X, -Position.Y, 0) * Matrix.CreateScale(scale);
@@ -46,8 +46,8 @@ namespace RogueGame{
 		private void FollowPlayer(Vector2 pos){
 
 			// Move the camera to players position
-			Position.X = ((pos.X) - (Graphics.width / 2) / scale);
-			Position.Y = ((pos.Y) - (Graphics.height / 2) / scale);
+			Position.X = ((pos.X) - (Graphics.ScreenWidth / 2) / scale);
+			Position.Y = ((pos.Y) - (Graphics.ScreenHeight / 2) / scale);
 
 			// Set virtual cameras position
 			virtualCameraPos = pos;

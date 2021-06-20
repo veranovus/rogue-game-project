@@ -18,6 +18,24 @@ namespace RogueGame{
 		}
 
 
+		// Add a new GameObject to the list and initialize it
+		public void AddObject(GameObject obj){
+
+			gameObjects.Add(obj);
+			obj.Init();
+		}
+
+
+		// Remove GameObject from the list
+		public void RemoveObject(GameObject obj){
+
+			if (gameObjects.Contains(obj)){
+
+				gameObjects.Remove(obj);
+			}
+		}
+
+
 		// Call the update method of each object
 		public void Update(GameTime gameTime){
 

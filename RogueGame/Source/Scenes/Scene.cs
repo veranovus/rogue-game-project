@@ -6,13 +6,15 @@ namespace RogueGame{
 	public abstract class Scene{
 
 		// Properties
+		public Game GameInstance;
 		public int sceneId;
 
 
 		// Constructor
-		public Scene(SceneId sceneId) {
+		public Scene(Game game, SceneId sceneId) {
 
 			// Set scene id
+			this.GameInstance = game;
 			this.sceneId = (int)sceneId;
 		}
 

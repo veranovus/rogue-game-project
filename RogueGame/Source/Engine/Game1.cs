@@ -11,7 +11,7 @@ namespace RogueGame
         public static bool Debug = true;
 
         // Scenes
-        public SceneGame sceneGame = new SceneGame(SceneId.Game); 
+        public SceneGame sceneGame;
 
 
         public Game1(){
@@ -40,6 +40,9 @@ namespace RogueGame
             // Initialize SceneManager
             SceneManager.Init();
 
+            // Create Scenes
+            sceneGame = new SceneGame(this, SceneId.Game);
+
             // Initialize and Add Scenes to SceneManager
             SceneManager.AddScene(sceneGame);
             // Set the Starting Scene
@@ -67,7 +70,10 @@ namespace RogueGame
             Graphics.Update(gameTime);
             // Set the title to show fps
             if (Debug) { Window.Title = Graphics.GameTitle + " - FPS : " + Convert.ToString((int)Graphics.fps); }
-            
+
+            // Update the InputHandler
+            InputHandler.Update();
+
             // Update the current scene
             SceneManager.Update(gameTime);
 
