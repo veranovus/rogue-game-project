@@ -1,2 +1,2 @@
-# rogue-game-project
- Rogue-like game made in C# using XNA Game Framework
+# Rogue-like Game
+ A Rogue-like game made in C# using XNA Game Framework
