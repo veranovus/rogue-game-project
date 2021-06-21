@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace RogueGame{
 
@@ -36,7 +37,7 @@ namespace RogueGame{
 		public override void Update(GameTime gameTime){
 
 			// Update Camera
-			gameCamera.Update(player.Position);
+			gameCamera.Update(player.GetCenteredPos());
 
             // Draw GameObjects
             objectManager.Update(gameTime);
@@ -50,7 +51,7 @@ namespace RogueGame{
 			Graphics.Clear(Color.Black);
 
 			// Begin
-            Graphics._spriteBatch.Begin();
+            Graphics._spriteBatch.Begin(transformMatrix: gameCamera.Transform, samplerState: SamplerState.PointClamp);
 
             // Draw GameObjects
             objectManager.Draw(gameTime);
@@ -59,4 +60,4 @@ namespace RogueGame{
 			Graphics._spriteBatch.End();
 		}
 	}
-}// transformMatrix: camera.Transform, samplerState: SamplerState.PointClamp
+}// 

@@ -13,6 +13,8 @@ namespace RogueGame{
 
 		// Movement
 		public const int TileSize = 50;
+		private float movementCooldown = 0.25f;
+		private float movementTimer;
 
 
 		// Input
@@ -47,7 +49,7 @@ namespace RogueGame{
 		public override void Update(GameTime gameTime){
 
 			// Handle Imput
-			HandleInput();
+			HandleInput(gameTime);
 		}
 
 
@@ -59,16 +61,36 @@ namespace RogueGame{
 		}
 
 
-		private void HandleInput(){
+		private void HandleInput(GameTime gameTime){
 
 			// Get keyboard input from InputHandler
 			keyboardState = InputHandler.GetKeyboardState();
 
+			// Update the movement Timer;
+			movementTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
 			// Movement
-			if (keyboardState.IsKeyDown(Keys.W)) { y -= TileSize; }
-			if (keyboardState.IsKeyDown(Keys.S)) { y += TileSize; }
-			if (keyboardState.IsKeyDown(Keys.A)) { x -= TileSize; }
-			if (keyboardState.IsKeyDown(Keys.D)) { x += TileSize; }
+			if (keyboardState.IsKeyDown(Keys.W)) { Move('y', -1); }
+			if (keyboardState.IsKeyDown(Keys.S)) { Move('y', +1); }
+			if (keyboardState.IsKeyDown(Keys.A)) { Move('x', -1); }
+			if (keyboardState.IsKeyDown(Keys.D)) { Move('x', +1); }
+		}
+
+
+		private void Move(char axis, int direction){
+
+			if ((movementTimer < movementCooldown)) { return; } 
+
+			if (axis == 'x'){
+
+				x += direction * TileSize;
+			}
+			else if (axis == 'y'){
+
+				y += direction * TileSize;
+			}
+
+			movementTimer = 0;
 		}
 	}
 }
