@@ -9,29 +9,29 @@ namespace RogueGame{
 	public class Player : GameObject{
 
 		// Properties
-
+		public int maxHealth = 100;
+		public int currentHealth = maxHealth;
 
 		// Movement
-		public const int TileSize = 50;
-		private float movementCooldown = 0.25f;
+		public const int TileSize = 32;
+		private float movementCooldown = 0.15f;
 		private float movementTimer;
-
 
 		// Input
 		KeyboardState keyboardState;
-
 
 		// Sprite
 		private Texture2D playerSprite;
 
 
+		// Constructor
 		public Player(Vector2 position, Game game) : base(position.X, position.Y, TileSize, TileSize, ObjectTag.Player, game) { }
 
 
         // Load Sprites and Other Content
         protected override void LoadContent(){
 
-			playerSprite = GameHolder.GameInstance.Content.Load<Texture2D>("Player/player_fighter");
+			playerSprite = GameHolder.GameInstance.Content.Load<Texture2D>("Player/player_sprite");
         }
 
 

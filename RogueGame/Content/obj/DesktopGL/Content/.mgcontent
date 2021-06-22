@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/Content/Player/player_fighter.png</File>
+    <File>C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/Content/Player/player_sprite.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

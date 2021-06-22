@@ -1,2 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/Content/Player/player_fighter.png","C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/Content/bin/DesktopGL/Player/player_fighter.xnb","TextureProcessor","Texture2DContent",969,10085,0.1441964
+"C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/Content/Player/player_sprite.png","C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/Content/bin/DesktopGL/Player/player_sprite.xnb","TextureProcessor","Texture2DContent",380,4181,0.1405806

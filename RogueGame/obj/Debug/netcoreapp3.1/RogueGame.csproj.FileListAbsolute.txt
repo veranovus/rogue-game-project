@@ -21,4 +21,4 @@ C:\Users\batuh\Documents\C#\XNA\RogueProject\RogueGame\obj\Debug\netcoreapp3.1\R
 C:\Users\batuh\Documents\C#\XNA\RogueProject\RogueGame\obj\Debug\netcoreapp3.1\RogueGame.dll
 C:\Users\batuh\Documents\C#\XNA\RogueProject\RogueGame\obj\Debug\netcoreapp3.1\RogueGame.pdb
 C:\Users\batuh\Documents\C#\XNA\RogueProject\RogueGame\obj\Debug\netcoreapp3.1\RogueGame.genruntimeconfig.cache
-C:\Users\batuh\Documents\C#\XNA\RogueProject\RogueGame\bin\Debug\netcoreapp3.1\Content\Player\player_fighter.xnb
+C:\Users\batuh\Documents\C#\XNA\RogueProject\RogueGame\bin\Debug\netcoreapp3.1\Content\Player\player_sprite.xnb

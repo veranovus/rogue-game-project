@@ -10,7 +10,7 @@ namespace RogueGame{
 		// Properties
 		public Vector2 Position;
 		public Matrix Transform { get; private set; }
-		public bool lockPlayer = true;
+		public bool lockPlayer = false;
 
 		// Camera Zoom
 		public float scale = 1f;
@@ -77,7 +77,8 @@ namespace RogueGame{
 
 		private void SetZoom(float value){
 
-			scale += value * Graphics.deltaTime;
+			// 0.75 is smoothing value
+			scale += value * Graphics.deltaTime * 0.75f;
 
 			if (scale > maxZoom) { scale = maxZoom; }
 			else if (scale < minZoom) { scale = minZoom; }
