@@ -10,7 +10,7 @@ namespace RogueGame{
 		// Properties
 		public Vector2 Position;
 		public Matrix Transform { get; private set; }
-		public bool lockPlayer = false;
+		public bool lockPlayer = true;
 
 		// Camera Zoom
 		public float scale = 1f;

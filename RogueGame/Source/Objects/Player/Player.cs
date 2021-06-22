@@ -10,7 +10,10 @@ namespace RogueGame{
 
 		// Properties
 		public int maxHealth = 100;
-		public int currentHealth = maxHealth;
+		public int currentHealth;
+
+        // Children 
+        public HealthBar healthBar;
 
 		// Movement
 		public const int TileSize = 32;
@@ -37,6 +40,11 @@ namespace RogueGame{
 
         public override void Init(){
 
+        	// Properties
+        	currentHealth = maxHealth;
+
+        	// Initialize Children
+            healthBar = new HealthBar(this, Position);
 		}
 
 
@@ -50,6 +58,9 @@ namespace RogueGame{
 
 			// Handle Imput
 			HandleInput(gameTime);
+
+			// Update the HealthBar
+			healthBar.Update();
 		}
 
 
@@ -58,6 +69,9 @@ namespace RogueGame{
 			// Draw the player sprite
 			if (playerSprite == null) return;
 			Graphics._spriteBatch.Draw(playerSprite, rect, Color.White);
+
+			// Draw the HealthBar
+			healthBar.Draw();
 		}
 
 
@@ -91,6 +105,14 @@ namespace RogueGame{
 			}
 
 			movementTimer = 0;
+		}
+
+
+		private void TakeDamage(int value){
+
+			currentHealth -= value;
+
+			healthBar.UpdateHealthBar(maxHealth, currentHealth);
 		}
 	}
 }
