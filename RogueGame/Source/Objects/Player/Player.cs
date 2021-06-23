@@ -58,9 +58,6 @@ namespace RogueGame{
 
 			// Handle Imput
 			HandleInput(gameTime);
-
-			// Update the HealthBar
-			healthBar.Update();
 		}
 
 
@@ -104,7 +101,11 @@ namespace RogueGame{
 				y += direction * TileSize;
 			}
 
+			// Reset the timer
 			movementTimer = 0;
+
+			// Update the HealthBar Position
+			healthBar.UpdatePosition(Position);
 		}
 
 
@@ -112,6 +113,7 @@ namespace RogueGame{
 
 			currentHealth -= value;
 
+			// Update healthbar to show correct health
 			healthBar.UpdateHealthBar(maxHealth, currentHealth);
 		}
 	}

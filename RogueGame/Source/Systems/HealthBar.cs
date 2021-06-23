@@ -28,13 +28,6 @@ namespace RogueGame{
 		}
 
 
-		public void Update(){
-
-			// Update the position of the healthbar
-			UpdatePosition();
-		}
-
-
 		public void Draw(){
 
 			// Draw the healthbar
@@ -51,10 +44,11 @@ namespace RogueGame{
 		}
 
 
-		private void UpdatePosition(){
+		// Update the position of the HealthBar
+		public void UpdatePosition(Vector2 position){
 
-			position.X = attachedObject.Position.X + ((32 - width) / 2); // Additional value is used to center it
-			position.Y = attachedObject.Position.Y + (4); // Additional value is margin
+			this.position.X = position.X + ((32 - width) / 2); // Additional value is used to center it
+			this.position.Y = position.Y - (4); // Additional value is margin
 		}		
 	}
 }
