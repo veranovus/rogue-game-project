@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{3655607B-3C33-43B8-B934-9FF61D015ECF}|Default">
+  <MonoDevelop.Ide.ItemProperties.RogueGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Source/Systems/Tilemap/Tile.cs">
+    <Files>
+      <File FileName="Source/Scenes/SceneGame.cs" Line="17" Column="12" />
+      <File FileName="Source/Systems/Tilemap/Tilemap.cs" Line="16" Column="1" />
+      <File FileName="Source/Systems/Tilemap/Tile.cs" Line="11" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RogueGame" expanded="True">
+            <Node name="RogueGame" expanded="True">
+              <Node name="Source" expanded="True">
+                <Node name="Engine" expanded="True" />
+                <Node name="Managers" expanded="True" />
+                <Node name="Objects" expanded="True" />
+                <Node name="Scenes" expanded="True" />
+                <Node name="Systems" expanded="True">
+                  <Node name="Tilemap" expanded="True">
+                    <Node name="Tile.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

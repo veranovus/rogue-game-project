@@ -11,8 +11,8 @@ namespace RogueGame{
 		public int width, height;
 		public int tileSize;
 
-		// Texture
-		private Texture2D tileset;
+        // Texture
+        private Texture2D tileset;
 
 		// Properties
 		public Grid<int> tileGrid;
@@ -31,7 +31,7 @@ namespace RogueGame{
 			this.tileset = game.Content.Load<Texture2D>(tileset);
 
 			// Properties
-			this.tileGrid = new Grid<int>();
+			this.tileGrid = new Grid<int>(position, width, height, tileSize);
 		}
 	}
 }
