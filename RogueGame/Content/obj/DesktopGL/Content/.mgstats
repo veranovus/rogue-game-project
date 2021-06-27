@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "/Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/Content/Player/player_sprite.png","/Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/Content/bin/DesktopGL/Content/Player/player_sprite.xnb","TextureProcessor","Texture2DContent",380,4181,0.932006
+"/Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/Content/Tileset/tileset.png","/Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/Content/bin/DesktopGL/Content/Tileset/tileset.xnb","TextureProcessor","Texture2DContent",1095,102485,0.213299

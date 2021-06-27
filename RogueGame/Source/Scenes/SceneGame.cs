@@ -18,6 +18,10 @@ namespace RogueGame{
 		public Player player;
 
 
+		// Tilemap
+		public Tilemap tilemap;
+
+
 		// Constructor
 		public SceneGame(Game game, SceneId sceneId) : base(game, sceneId) {}
 
@@ -26,7 +30,10 @@ namespace RogueGame{
 		public override void Init(){
 
 			// Create GameObjects
-			player = new Player(new Vector2(50, 50), GameInstance);
+			player = new Player(new Vector2(0, 0), GameInstance);
+
+			// Create Tilemap
+			tilemap = new Tilemap(GameInstance, new Vector2(0, 0), 20, 20, 32, "Tileset/tileset");
 
 			// Add GameObjects to ObjectManager
 			objectManager.AddObject(player);
@@ -53,6 +60,9 @@ namespace RogueGame{
 			// Begin
             Graphics._spriteBatch.Begin(transformMatrix: gameCamera.Transform, samplerState: SamplerState.PointClamp);
 
+			// Draw Tilemap
+			tilemap.DrawTileset();
+
             // Draw GameObjects
             objectManager.Draw(gameTime);
 
@@ -60,4 +70,4 @@ namespace RogueGame{
 			Graphics._spriteBatch.End();
 		}
 	}
-}// 
+}

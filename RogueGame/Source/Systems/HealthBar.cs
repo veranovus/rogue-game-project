@@ -12,6 +12,7 @@ namespace RogueGame{
 		public Vector2 position;
 		public int width, height;
 		public int currentWidth;
+		private Rectangle bounds;
 
 
 		// Constructor
@@ -30,8 +31,12 @@ namespace RogueGame{
 
 		public void Draw(){
 
+			// If HealthBar's position is not equal to parent then return
+			//if ((position.X - (32 - width) / 2) != attachedObject.Position.X) return;
+			//else if ((position.Y + (4)) != attachedObject.Position.Y) return;
+
 			// Draw the healthbar
-			Graphics.FillRect(new Rectangle((int)position.X, (int)position.Y, currentWidth, height), Color.Red, 0f);
+			Graphics.FillRect(bounds, Color.Red, 0f);
 		}
 
 
@@ -48,7 +53,10 @@ namespace RogueGame{
 		public void UpdatePosition(Vector2 position){
 
 			this.position.X = position.X + ((32 - width) / 2); // Additional value is used to center it
-			this.position.Y = position.Y - (4); // Additional value is margin
+			this.position.Y = position.Y - (2); // Additional value is margin
+
+			// Set bounds
+			bounds = new Rectangle((int)this.position.X, (int)this.position.Y, currentWidth, height);
 		}		
 	}
 }

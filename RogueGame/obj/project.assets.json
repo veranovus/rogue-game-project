@@ -186,7 +186,7 @@
       "outputPath": "/Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/batuhanyigit/.config/NuGet/NuGet.Config"
+        "/Users/batuhanyigit/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

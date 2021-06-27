@@ -45,3 +45,4 @@ C:/Users/batuh/Documents/C#/XNA/RogueProject/RogueGame/bin/Debug/netcoreapp3.1/C
 /Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/obj/Debug/netcoreapp3.1/RogueGame.dll
 /Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/obj/Debug/netcoreapp3.1/RogueGame.pdb
 /Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/obj/Debug/netcoreapp3.1/RogueGame.genruntimeconfig.cache
+/Users/batuhanyigit/Documents/C#/XNA/RogueProject/RogueGame/bin/Debug/netcoreapp3.1/Content/Tileset/tileset.xnb

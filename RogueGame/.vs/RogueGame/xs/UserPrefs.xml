@@ -1,25 +1,34 @@
 ﻿<Properties StartupConfiguration="{3655607B-3C33-43B8-B934-9FF61D015ECF}|Default">
   <MonoDevelop.Ide.ItemProperties.RogueGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Source/Systems/Tilemap/Tile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Source/Systems/Spesific/PrimitiveGrid.cs">
     <Files>
-      <File FileName="Source/Scenes/SceneGame.cs" Line="17" Column="12" />
-      <File FileName="Source/Systems/Tilemap/Tilemap.cs" Line="16" Column="1" />
-      <File FileName="Source/Systems/Tilemap/Tile.cs" Line="11" Column="29" />
+      <File FileName="Source/Scenes/SceneGame.cs" Line="35" Column="21" />
+      <File FileName="Source/Systems/AStar/AStar.cs" Line="34" Column="10" />
+      <File FileName="Source/Systems/AStar/AStarNode.cs" Line="17" Column="59" />
+      <File FileName="Source/Systems/Grid.cs" Line="50" Column="8" />
+      <File FileName="Source/Systems/Spesific/PrimitiveGrid.cs" Line="34" Column="64" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="RogueGame" expanded="True">
             <Node name="RogueGame" expanded="True">
+              <Node name="Content" expanded="True">
+                <Node name="Tileset" expanded="True" />
+              </Node>
               <Node name="Source" expanded="True">
                 <Node name="Engine" expanded="True" />
                 <Node name="Managers" expanded="True" />
-                <Node name="Objects" expanded="True" />
+                <Node name="Objects" expanded="True">
+                  <Node name="Player" expanded="True" />
+                </Node>
                 <Node name="Scenes" expanded="True" />
                 <Node name="Systems" expanded="True">
-                  <Node name="Tilemap" expanded="True">
-                    <Node name="Tile.cs" selected="True" />
+                  <Node name="AStar" expanded="True" />
+                  <Node name="Spesific" expanded="True">
+                    <Node name="PrimitiveGrid.cs" selected="True" />
                   </Node>
+                  <Node name="Tilemap" expanded="True" />
                 </Node>
               </Node>
             </Node>

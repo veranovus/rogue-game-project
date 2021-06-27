@@ -45,6 +45,7 @@ namespace RogueGame{
 
         	// Initialize Children
             healthBar = new HealthBar(this, Position);
+			healthBar.UpdatePosition(Position);
 		}
 
 
@@ -109,6 +110,7 @@ namespace RogueGame{
 		}
 
 
+		// Take Damage
 		private void TakeDamage(int value){
 
 			currentHealth -= value;
